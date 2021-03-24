@@ -5,7 +5,7 @@ from events import models
 
 
 @admin.register(models.Event)
-class InboxAdmin(admin.ModelAdmin):
+class EventAdmin(admin.ModelAdmin):
     list_display = [
         'event_image',
         'event_text',
