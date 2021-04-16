@@ -6,3 +6,9 @@ class Post(models.Model):
     date = models.DateTimeField()
     image = models.ImageField(upload_to='event_images/')
     text = models.TextField()
+
+    def get_summary(self):
+        return self.text[:70]
+
+    def __str__(self):
+        return self.title
